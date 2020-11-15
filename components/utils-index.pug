@@ -1,0 +1,35 @@
+-var titles = ["Create and share your photo Stories", "Beautiful stories every time","Designed for everyone"]
+-var descriptions = ["Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.", "We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.", "Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it."]
+-var mainImages = ["create-and-share.jpg", "beautiful-stories.jpg", "designed-for-everyone.jpg"]
+-var galleryTitles = ["The Mountains", "Sunset Cityscapes", "18 Days Voyage", "Architecturals"]
+-var galleryAuthors = ["John Appleseed", "Benjamin Cruz", "Alexei Borodin", "Samantha Brooke"]
+-var featuresTitles = ["100% Responsive", "No Photo Upload Limit", "Available to Embed"]
+-var featuresDescriptions = ["No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.", "Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.", "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. "]
+
+mixin homeBox(title, description, action, image, inverted)
+    div(class=inverted?"homeBox__container inverted":"homeBox__container")
+        .homeBox__description
+            h1.homeBox__title=title
+            p.homeBox__description=description
+            button.homeBox__action=action
+                img(src="assets/shared/desktop/arrow.svg")
+        picture.homeBox__imageContainer
+            img(src="assets/home/desktop/"+image alt="Home image")
+
+mixin galleryItem(galleryTitle, author, galleryImage)
+    .galleryItem__container
+        img.galleryItem__image(src="assets/stories/desktop/"+galleryImage)
+        h3.galleryItem__title=galleryTitle
+        h4.galleryItem__author by #{author}
+        .galleryItem__action
+            h4.galleryItem__action--text Read story
+            button.galleryItem__action--button
+                img(src="assets/shared/desktop/arrow.svg")
+
+
+mixin feature(icon, title, description)
+    .feature__container
+        img.feature__icon(src="assets/features/desktop/"+icon)
+        .feature__title=title
+        .feature__description=description
+

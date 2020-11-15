@@ -1,80 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Photosnap Website Challenge</title>
-</head>
-<body>
-
-  Stories
-  Features
-  Pricing
-
-  Get an invite
-
-  Create and share your photo Stories
-
-  Photosnap is a platform for photographers and visual storytellers. We make it 
-  easy to share photos, tell stories and connect with others.
-
-  Beautiful stories every time
-  
-  We provide design templates to ensure your stories look terrific. Easily add 
-  photos, text, embed maps and media from other networks. Then share your story 
-  with everyone.
-
-  View the stories
-
-  Designed for everyone
-
-  Photosnap can help you create stories that resonate with your audience.  Our 
-  tool is designed for photographers of all levels, brands, businesses you name it. 
-
-  View the stories
-
-  The Mountains
-  by John Appleseed
-  Read Story
-
-  Sunset Cityscapes
-  by Benjamin Cruz
-  Read Story
-
-  18 Days Voyage
-  by Alexei Borodin
-  Read Story
-
-  Architecturals
-  by Samantha Brooke
-  Read Story
-
-  100% Responsive
-
-  No matter which the device you’re on, our site is fully responsive and stories 
-  look beautiful on any screen.
-
-  No Photo Upload Limit
-
-  Our tool has no limits on uploads or bandwidth. Freely upload in bulk and 
-  share all of your stories in one go.
-
-  Available to Embed
-
-  Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, 
-  Google Maps, and more. 
-
-  Home
-  Stories
-  Features
-  Pricing
-
-  Get an invite
-
-  Copyright 2019. All Rights Reserved
-
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://kit.fontawesome.com/26d881bbae.js" crossorigin="anonymous"></script>
+    <title>Frontend Mentor | Photosnap</title>
+  </head>
+  <body>
+    <header>
+      <div class="page__container"><img class="header__logo" src="assets/shared/desktop/logo.svg">
+        <div class="menu__container">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li>Stories</li>
+              <li>Features</li>
+              <li>Pricing</li>
+            </ul>
+            <button class="menu__button">Get an invite</button>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="home__featuresBoxes">
+        <div class="homeBox__container">
+          <div class="homeBox__description">
+            <h1 class="homeBox__title">Create and share your photo Stories</h1>
+            <p class="homeBox__description">Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.</p>
+            <button class="homeBox__action">Get an invite<img src="assets/shared/desktop/arrow.svg"/></button>
+          </div>
+          <picture class="homeBox__imageContainer"><img src="assets/home/desktop/create-and-share.jpg" alt="Home image"/></picture>
+        </div>
+        <div class="homeBox__container inverted">
+          <div class="homeBox__description">
+            <h1 class="homeBox__title">Beautiful stories every time</h1>
+            <p class="homeBox__description">We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.</p>
+            <button class="homeBox__action">View the stories<img src="assets/shared/desktop/arrow.svg"/></button>
+          </div>
+          <picture class="homeBox__imageContainer"><img src="assets/home/desktop/beautiful-stories.jpg" alt="Home image"/></picture>
+        </div>
+        <div class="homeBox__container">
+          <div class="homeBox__description">
+            <h1 class="homeBox__title">Designed for everyone</h1>
+            <p class="homeBox__description">Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it.</p>
+            <button class="homeBox__action">View the stories<img src="assets/shared/desktop/arrow.svg"/></button>
+          </div>
+          <picture class="homeBox__imageContainer"><img src="assets/home/desktop/designed-for-everyone.jpg" alt="Home image"/></picture>
+        </div>
+      </section>
+      <section class="gallery__container">
+        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/mountains.jpg"/>
+          <h3 class="galleryItem__title">The Mountains</h3>
+          <h4 class="galleryItem__author">by John Appleseed</h4>
+          <div class="galleryItem__action">
+            <h4 class="galleryItem__action--text">Read story</h4>
+            <button class="galleryItem__action--button"><img src="assets/shared/desktop/arrow.svg"/></button>
+          </div>
+        </div>
+        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/cityscapes.jpg"/>
+          <h3 class="galleryItem__title">Sunset Cityscapes</h3>
+          <h4 class="galleryItem__author">by Benjamin Cruz</h4>
+          <div class="galleryItem__action">
+            <h4 class="galleryItem__action--text">Read story</h4>
+            <button class="galleryItem__action--button"><img src="assets/shared/desktop/arrow.svg"/></button>
+          </div>
+        </div>
+        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/18-days-voyage.jpg"/>
+          <h3 class="galleryItem__title">18 Days Voyage</h3>
+          <h4 class="galleryItem__author">by Alexei Borodin</h4>
+          <div class="galleryItem__action">
+            <h4 class="galleryItem__action--text">Read story</h4>
+            <button class="galleryItem__action--button"><img src="assets/shared/desktop/arrow.svg"/></button>
+          </div>
+        </div>
+        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/architecturals.jpg"/>
+          <h3 class="galleryItem__title">Architecturals</h3>
+          <h4 class="galleryItem__author">by Samantha Brooke</h4>
+          <div class="galleryItem__action">
+            <h4 class="galleryItem__action--text">Read story</h4>
+            <button class="galleryItem__action--button"><img src="assets/shared/desktop/arrow.svg"/></button>
+          </div>
+        </div>
+      </section>
+      <section class="features__container">
+        <div class="feature__container"><img class="feature__icon" src="assets/features/desktop/responsive.svg"/>
+          <div class="feature__title">100% Responsive</div>
+          <div class="feature__description">No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.</div>
+        </div>
+        <div class="feature__container"><img class="feature__icon" src="assets/features/desktop/no-limit.svg"/>
+          <div class="feature__title">No Photo Upload Limit</div>
+          <div class="feature__description">Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.</div>
+        </div>
+        <div class="feature__container"><img class="feature__icon" src="assets/features/desktop/embed.svg"/>
+          <div class="feature__title">Available to Embed</div>
+          <div class="feature__description">Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. </div>
+        </div>
+      </section>
+    </main>
+    <footer><img class="footer__logo">
+      <nav class="footer__menu">
+        <ul>
+          <li>Home</li>
+          <li>Stories</li>
+          <li>Features</li>
+          <li>Pricing</li>
+        </ul>
+      </nav>
+      <div class="footer__socialLink"><i class="fab fa-facebook-square"></i><i class="fab fa-instagram"></i><i class="fab fa-twitter"></i><i class="fab fa-pinterest"></i><i class="fab fa-youtube"></i></div>
+      <div class="footer__actionButton">
+        <button class="footer__button">Get an invite<img src="assets/shared/desktop/arrow.svg"></button>
+      </div>
+      <div class="footer__copyright">Copyright 2019. All Rights Reserved</div>
+    </footer>
+  </body>
 </html>
