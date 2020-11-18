@@ -1,0 +1,109 @@
+$main-accent: linear-gradient(rgb(255, 197, 147),rgb(188, 113, 152),rgb(90, 119, 255));
+$pure-black:#000000;
+$light-gray: #DFDFDF;
+$pure-white: #FFFFFF;
+
+@mixin heading-h1 {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 1.04px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@mixin heading-h2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+@mixin heading-h3 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+@mixin heading-h4 {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  letter-spacing: 1.66px;
+  text-transform: uppercase;
+}
+@mixin button {
+  @include heading-h4;
+  height: 40px;
+  width: 158px;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin button1 {
+  @include button;
+  background-color: $pure-black;
+  color: $pure-white;
+
+  &:hover {
+    background-color: $light-gray;
+    color: $pure-black;
+  }
+}
+
+@mixin button2 {
+  @include button;
+  width: auto;
+  border: none;
+  background-color: $pure-white;
+  color: $pure-black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin button4 {
+  @include button;
+  width: auto;
+  border: none;
+  background-color: $pure-black;
+  color: $pure-white;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin icon-gradient {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.page__container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1110px;
+  height: inherit;
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  flex-wrap: inherit;
+}

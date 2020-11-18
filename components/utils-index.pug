@@ -6,30 +6,30 @@
 -var featuresTitles = ["100% Responsive", "No Photo Upload Limit", "Available to Embed"]
 -var featuresDescriptions = ["No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.", "Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.", "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. "]
 
-mixin homeBox(title, description, action, image, inverted)
+mixin homeBox(title, description, action, image, inverted, black)
     div(class=inverted?"homeBox__container inverted":"homeBox__container")
         .homeBox__description
             h1.homeBox__title=title
             p.homeBox__description=description
             button.homeBox__action=action
-                img(src="assets/shared/desktop/arrow.svg")
+                img(src=black?"assets/shared/desktop/arrow-white.svg":"assets/shared/desktop/arrow.svg")
         picture.homeBox__imageContainer
             img(src="assets/home/desktop/"+image alt="Home image")
 
 mixin galleryItem(galleryTitle, author, galleryImage)
     .galleryItem__container
         img.galleryItem__image(src="assets/stories/desktop/"+galleryImage)
-        h3.galleryItem__title=galleryTitle
-        h4.galleryItem__author by #{author}
-        .galleryItem__action
-            h4.galleryItem__action--text Read story
-            button.galleryItem__action--button
-                img(src="assets/shared/desktop/arrow.svg")
+        .galleryItem__image--filter
+        .galleryItem__description
+            h3.galleryItem__title=galleryTitle
+            h4.galleryItem__author by #{author}
+            button.galleryItem__action Read story
+                img(src="assets/shared/desktop/arrow-white.svg")
 
 
 mixin feature(icon, title, description)
     .feature__container
         img.feature__icon(src="assets/features/desktop/"+icon)
-        .feature__title=title
+        h3.feature__title=title
         .feature__description=description
 

@@ -1,0 +1,45 @@
+header {
+  height: 72px;
+
+  .page__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
+
+  .header__logo {
+    height: 16px;
+  }
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: inherit;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      @include heading-h4;
+      text-decoration: none;
+      color: $pure-black;
+
+      &:hover {
+        color: $light-gray;
+      }
+    }
+  }
+
+  &__button {
+    @include button1;
+    margin-left: auto;
+  }
+}

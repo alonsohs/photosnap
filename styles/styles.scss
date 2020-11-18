@@ -1,0 +1,103 @@
+@import "components/globals";
+@import "components/header";
+@import "components/gallery";
+@import "components/features";
+@import "components/footer";
+
+.home__featuresBoxes {
+  display: grid;
+  grid-template-rows: repeat(3, 600px);
+}
+
+
+.homeBox {
+
+  &__container {
+    display: grid;
+    grid-template-columns: .735fr 1fr;
+
+    &:nth-of-type(1) {
+      background-color: $pure-black;
+      color: $pure-white;
+      position: relative;
+
+      &:after {
+        content: "";
+        height: 50%;
+        width: 6px;
+        background: rgb(255,197,147);
+        background: linear-gradient(0deg, rgba(255,197,147,1) 0%, rgba(188,113,152,1) 50%, rgba(90,119,255,1) 100%);
+        position: absolute;
+        top: calc(50% - (50%/2));
+        left: 0;
+        z-index: 2;
+      }
+
+      .homeBox__action {
+        @include button4;
+
+      }
+    }
+  }
+
+  &__description {
+    max-width: 387px;
+    align-self: center;
+    justify-self: center;
+
+  }
+  &__title {
+    @include heading-h1;
+    width: 90%;
+  }
+
+  &__description {
+    margin-top: 1em;
+  }
+
+  &__action {
+    @include button2;
+    margin-top: 4em;
+
+    img {
+      margin-left: 1.5em;
+    }
+
+
+  }
+
+  &__imageContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.inverted {
+
+  &.homeBox__container {
+    grid-template-columns: 1fr .735fr;
+  }
+
+  .homeBox__description {
+    order: 2;
+  }
+
+  .homeBox__title {
+    width: 70%;
+  }
+
+  .homeBox__imageContainer {
+    order: 1;
+  }
+}
+
+
+
+
+

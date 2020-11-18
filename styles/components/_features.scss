@@ -1,0 +1,32 @@
+.features__container{
+  height: 476px;
+  display: flex;
+  align-items: center;
+
+  .page__container {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: baseline;
+    gap: 2em;
+  }
+
+  .feature__container{
+    display: grid;
+    justify-items: center;
+    gap: 1em;
+  }
+
+  .feature__icon {
+    margin-bottom: 2em;
+  }
+
+  .feature__title {
+    @include heading-h3;
+  }
+
+  .feature__description {
+    text-align: center;
+  }
+
+}

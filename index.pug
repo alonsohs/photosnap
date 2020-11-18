@@ -4,7 +4,7 @@ block body
         include components/header
         main
             section.home__featuresBoxes
-                +homeBox(titles[0], descriptions[0],"Get an invite", mainImages[0], false)
+                +homeBox(titles[0], descriptions[0],"Get an invite", mainImages[0], false, true)
                 +homeBox(titles[1], descriptions[1],"View the stories", mainImages[1], true)
                 +homeBox(titles[2], descriptions[2],"View the stories", mainImages[2], false)
             section.gallery__container
@@ -13,8 +13,8 @@ block body
                 +galleryItem(galleryTitles[2], galleryAuthors[2], "18-days-voyage.jpg")
                 +galleryItem(galleryTitles[3], galleryAuthors[3], "architecturals.jpg")
             section.features__container
-                +feature("responsive.svg", featuresTitles[0], featuresDescriptions[0])
-                +feature("no-limit.svg", featuresTitles[1], featuresDescriptions[1])
-                +feature("embed.svg", featuresTitles[2], featuresDescriptions[2])
+                .page__container
+                    +feature("responsive.svg", featuresTitles[0], featuresDescriptions[0])
+                    +feature("no-limit.svg", featuresTitles[1], featuresDescriptions[1])
+                    +feature("embed.svg", featuresTitles[2], featuresDescriptions[2])
         include components/footer
-
