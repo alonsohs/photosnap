@@ -315,7 +315,7 @@ header .header__logo {
 
 .storiesHero {
   height: 650px;
-  background: url("../../assets/stories/desktop/moon-of-appalacia.jpg") no-repeat;
+  background: url("../assets/stories/desktop/moon-of-appalacia.jpg") no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
