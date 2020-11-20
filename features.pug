@@ -1,0 +1,17 @@
+extends  components/head
+block body
+    body
+        include components/header
+        main
+            section.hero__container
+                +heroBox("Features","We make sure all of our features are designed to be loved by every aspiring and even professional photograpers who wanted to share their stories.", "features","hero.jpg", false, true)
+            section.features__container
+                .page__container
+                    +feature("responsive.svg", featuresTitles[0], featuresDescriptions[0])
+                    +feature("no-limit.svg", featuresTitles[1], featuresDescriptions[1])
+                    +feature("embed.svg", featuresTitles[2], featuresDescriptions[2])
+                    +feature("custom-domain.svg", featuresTitles[3], featuresDescriptions[3])
+                    +feature("drag-drop.svg", featuresTitles[4], featuresDescriptions[4])
+                    +feature("boost-exposure.svg", featuresTitles[5], featuresDescriptions[5])
+            include components/beta
+        include components/footer

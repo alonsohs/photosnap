@@ -1,0 +1,6 @@
+.hero__container {
+  .homeBox__container:after {
+      height: 40%;
+      top: calc(50% - (40%/2) + 5px);
+  }
+}

@@ -1,0 +1,24 @@
+.beta {
+  &__container {
+    height: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url("../../assets/shared/desktop/bg-beta.jpg");
+    background-size: cover;
+  }
+
+  &__title  {
+    @include heading-h1;
+    color: white;
+    max-width: 350px;
+  }
+
+  &__action {
+    @include button4;
+
+    img {
+      margin-left: 1em;
+    }
+  }
+}

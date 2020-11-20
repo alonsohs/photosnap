@@ -1,0 +1,35 @@
+extends  components/head
+block body
+    body
+        include components/header
+        main
+            section.storiesHero
+                .hero__content
+                    h4 Last month's featured story
+                    h1.hero__title Hazy full moon of appalachia
+                    .hero__info
+                        p March 2nd 2020
+                            span.hero__author by John Appleseed
+                    p.hero__description The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.
+                    button.hero__action Read the story
+                        img(src="assets/shared/desktop/arrow-white.svg")
+            section.gallery__container
+                +galleryItem--date("April 16th 2020",galleryTitles[0], galleryAuthors[0], "mountains")
+                +galleryItem--date("April 14th 2020",galleryTitles[1], galleryAuthors[1], "cityscapes")
+                +galleryItem--date("April 11th 2020",galleryTitles[2], galleryAuthors[2], "18-days-voyage")
+                +galleryItem--date("April 9th 2020",galleryTitles[3], galleryAuthors[3], "architecturals")
+                +galleryItem--date("April 7th 2020", "World Tour 2019", "Timothy Wagner", "world-tour")
+                +galleryItem--date("April 3rd 2020", "Unforeseen Corners", "William Malcolm", "unforeseen-corners")
+                +galleryItem--date("March 29th 2020", "King on Africa: Part II", "Tim Hillenburg", "king-on-africa")
+                +galleryItem--date("March 21st 2020", "The Trip to Nowhere", "Felicia Rourke", "trip-to-nowhere")
+                +galleryItem--date("March 19th 2020", "Rage of The Sea", "Mohamed Abdul", "rage-of-the-sea")
+                +galleryItem--date("March 16th 2020", "Running Free", "Michelle", "running-free")
+                +galleryItem--date("March 11th 2020", "Behind the Waves", "Lamarr Wilson", "behind-the-waves")
+                +galleryItem--date("March 9th 2020", "Calm Waters", "Samantha Brooke", "calm-waters")
+                +galleryItem--date("March 5th 2020", "The Milky Way", "Benjamin Cruz", "milky-way")
+                +galleryItem--date("March 4th 2020", "Night at The Dark Forest", "Mohammed Abdul", "dark-forest")
+                +galleryItem--date("March 1st 2020", "Somwarpet's Beauty", "Michelle", "somwarpet")
+                +galleryItem--date("February 25th 2020", "Land of Dreams", "William Malcolm", "land-of-dreams")
+
+
+        include components/footer

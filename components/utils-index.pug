@@ -3,8 +3,8 @@
 -var mainImages = ["create-and-share.jpg", "beautiful-stories.jpg", "designed-for-everyone.jpg"]
 -var galleryTitles = ["The Mountains", "Sunset Cityscapes", "18 Days Voyage", "Architecturals"]
 -var galleryAuthors = ["John Appleseed", "Benjamin Cruz", "Alexei Borodin", "Samantha Brooke"]
--var featuresTitles = ["100% Responsive", "No Photo Upload Limit", "Available to Embed"]
--var featuresDescriptions = ["No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.", "Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.", "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. "]
+-var featuresTitles = ["100% Responsive", "No Photo Upload Limit", "Available to Embed", "Custom Domain", "Boost Your Exposure", "Drag & Drop Image"]
+-var featuresDescriptions = ["No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.", "Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.", "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more.", "With Photosnap subscriptions you can host your stories on your own domain. You can also remove our branding!", "Users that viewed your story or gallery can easily get notifed of new and featured stories with our built in mailing list.", "Easily drag and drop your image and get beautiful shots everytime. No over the top tooling to add friction to creating stories."]
 
 mixin homeBox(title, description, action, image, inverted, black)
     div(class=inverted?"homeBox__container inverted":"homeBox__container")
@@ -16,9 +16,17 @@ mixin homeBox(title, description, action, image, inverted, black)
         picture.homeBox__imageContainer
             img(src="assets/home/desktop/"+image alt="Home image")
 
+mixin heroBox(title, description,folder, image, inverted, black)
+    div(class=inverted?"homeBox__container inverted":"homeBox__container")
+        .homeBox__description
+            h1.homeBox__title=title
+            p.homeBox__description=description
+        picture.homeBox__imageContainer
+            img(src="assets/"+folder+"/desktop/"+image alt="Home image")
+
 mixin galleryItem(galleryTitle, author, galleryImage)
     .galleryItem__container
-        img.galleryItem__image(src="assets/stories/desktop/"+galleryImage)
+        img.galleryItem__image(src="assets/stories/desktop/"+galleryImage+".jpg")
         .galleryItem__image--filter
         .galleryItem__description
             h3.galleryItem__title=galleryTitle
@@ -26,6 +34,16 @@ mixin galleryItem(galleryTitle, author, galleryImage)
             button.galleryItem__action Read story
                 img(src="assets/shared/desktop/arrow-white.svg")
 
+mixin galleryItem--date (date, galleryTitle, author, galleryImage)
+    .galleryItem__container
+        img.galleryItem__image(src="assets/stories/desktop/"+galleryImage+".jpg")
+        .galleryItem__image--filter
+        .galleryItem__description
+            h4.galleryItem__date=date
+            h3.galleryItem__title=galleryTitle
+            h4.galleryItem__author by #{author}
+            button.galleryItem__action Read story
+                img(src="assets/shared/desktop/arrow-white.svg")
 
 mixin feature(icon, title, description)
     .feature__container

@@ -13,7 +13,7 @@ $pure-white: #FFFFFF;
 
 @mixin heading-h2 {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 400;
   line-height: 25px;
 }
 
@@ -67,7 +67,7 @@ $pure-white: #FFFFFF;
   @include button;
   width: auto;
   border: none;
-  background-color: $pure-black;
+  background-color:transparent;
   color: $pure-white;
   font-weight: 400;
   display: flex;

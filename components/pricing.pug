@@ -1,0 +1,45 @@
+mixin pricingPlan(title,description)
+    .pricing__plan
+        h2.pricing__title=title
+        p.pricing__description=description
+        h1.pricing__price $
+        p.pricing__per per
+        button.pricing__button Pick plan
+
+mixin tableFeatures(title, basic, pro, business)
+    .table__feature
+        h4.table__feature--title=title
+        .table__feature--plans
+            img(src=basic?"assets/pricing/desktop/check.svg":"")
+            img(src=pro?"assets/pricing/desktop/check.svg":"")
+            img(src=business?"assets/pricing/desktop/check.svg":"")
+
+
+section.pricing
+    .pricing__toogle
+        span.toogle__plan.selected Monthly
+        label.switch
+            input(type="checkbox", id="switch-pricing")
+            span(class="slider round")
+        span.toogle__plan Yearly
+    .pricing__plans
+        +pricingPlan("Basic", "Includes basic usage of our platform. Recommended for new and aspiring photographers.")
+        +pricingPlan("Pro", "More advanced features available. Recommended for photography veterans and professionals.")
+        +pricingPlan("Business", "Additional features available such as more detailed metrics. Recommended for business owners.")
+    .pricing__table
+        h1.table__title Compare
+        .table__headings
+            h4 The feautures
+            .table__headings--plans
+                h4 Basic
+                h4 Pro
+                h4 Business
+        +tableFeatures("Unlimited story posting", true, true, true)
+        +tableFeatures("Unlimited photo upload", true, true, true)
+        +tableFeatures("Embedding  custom content", false, true, true)
+        +tableFeatures("Customize metadata", false, true, true)
+        +tableFeatures("Advanced metrics", false, false, true)
+        +tableFeatures("Photo downloads", false, false, true)
+        +tableFeatures("Search engine indexing", false, false, true)
+        +tableFeatures("Custom analytics", false, false, true)
+
