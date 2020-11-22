@@ -30,6 +30,12 @@
     }
   }
 
+  &__date {
+    font-weight: 400;
+    font-size: 13px;
+    color: $pure-white;
+  }
+
   &__image  {
     position: absolute;
     width: 100%;
