@@ -3,6 +3,15 @@
   justify-items: center;
   padding: 8em 0;
   gap: 3em;
+
+  @include media(tablet-s) {
+    padding: 8em 2em;
+  }
+
+  @include media(mobile) {
+    padding: 5em 1em;
+  }
+
   &__toogle {
     display: flex;
     align-items: center;
@@ -86,10 +95,17 @@
   }
 
    &__plans {
+     margin-top: 2em;
      display: grid;
-     grid-template-columns: repeat(3, max(350px));
-     grid-template-rows: min(470px);
+     grid-template-columns: repeat(3, minmax(200px,350px));
+     grid-template-rows: min(407px);
      gap: 1.5em;
+     align-items: center;
+
+     @include media(tablet-s) {
+       grid-template-columns: 1fr;
+       grid-template-rows: auto;
+     }
 
      .pricing__plan {
        text-align: center;
@@ -98,31 +114,80 @@
        display: flex;
        flex-direction: column;
        justify-content: center;
+       background-color: #F5F5F5;
+
+       @include media(tablet-s) {
+         padding: 2.5em;
+         display: grid;
+         text-align: start;
+         row-gap: 1em;
+         grid-template-columns: 1fr 1fr;
+         grid-template-areas: "title price"
+                            "description price"
+                            "button price";
+       }
+
+       @include media(mobile) {
+         padding: 3em 1.5em;
+         grid-template-columns: 1fr;
+         grid-template-areas: "title" "description" "price" "button";
+         text-align: center;
+       }
      }
 
      .pricing__title {
        @include heading-h2;
        margin-bottom: 1em;
+       grid-area: title;
+
+       @include media(tablet-s) {
+         margin: 0;
+       }
      }
 
      .pricing__description {
        color: gray;
        height: 100px;
+       grid-area: description;
+
+       @include media(tablet-s) {
+         height: auto;
+       }
      }
 
      .pricing__price {
-       @include heading-h1;
+       grid-area: price;
+
+       @include media(tablet-s-only) {
+         justify-self: end;
+       }
+
+       @include media(mobile) {
+         margin: 1.5em 0 ;
+       }
+
+
+       &--title {
+         @include heading-h1;
+       }
      }
 
      .pricing__per {
        color: gray;
+       @include media(tablet-s-only) {
+         text-align: end;
+       }
      }
 
      .pricing__button {
        @include button1;
        width: 100%;
        margin-top: 3em;
+       grid-area: button;
 
+       @include media(tablet-s) {
+         margin: 0;
+       }
        &:hover {
          background-color: $light-gray;
          color: $pure-black;
@@ -132,6 +197,11 @@
      .pricing__plan:nth-of-type(2) {
        background-color: $pure-black;
        position: relative;
+       min-height: 470px;
+
+       @include media(tablet-s) {
+         min-height: auto;
+       }
 
        .pricing__title {
          color: $pure-white;
@@ -156,6 +226,12 @@
          top: 0;
          left: 0;
          z-index: 1;
+
+         @include media(tablet-s-only) {
+           height: 100%;
+           width: 6px;
+           background: linear-gradient(0deg, rgba(255,197,147,1) 0%, rgba(188,113,152,1) 50%, rgba(90,119,255,1) 100%);
+         }
        }
      }
 
@@ -166,6 +242,10 @@
     justify-items: center;
     width: 730px;
     margin-top: 5em;
+
+    @include media(tablet-s) {
+      width: 100%;
+    }
 
     .table__title {
       @include heading-h1;
@@ -178,6 +258,11 @@
       grid-template-columns: .8fr 1fr;
       padding-bottom: 1em;
       border-bottom: 1px solid $pure-black;
+
+      @include media(mobile) {
+        grid-template-columns: 1fr;
+      }
+
       h4 {
         @include heading-h4;
       }
@@ -186,6 +271,10 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
+
+        @include media(mobile) {
+          display: none;
+        }
       }
     }
 
@@ -196,10 +285,35 @@
       padding: 0;
       border-bottom: 1px solid rgba($pure-black, .3);
 
+      @include media(mobile) {
+        padding: 1.5em 0;
+        height: auto;
+      }
+
+      &--title {
+
+        @include media(mobile) {
+          margin-bottom: .7em;
+        }
+      }
+
       &--plans {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
+
+        p {
+          display: none;
+
+          @include media(mobile) {
+            display: block;
+            color: gray;
+          }
+        }
+
+        @include media(mobile) {
+          justify-items: start;
+        }
       }
     }
   }

@@ -9,6 +9,10 @@ $pure-white: #FFFFFF;
   letter-spacing: 1.04px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @include media(mobile) {
+    font-size: 32px;
+  }
 }
 
 @mixin heading-h2 {
@@ -29,6 +33,11 @@ $pure-white: #FFFFFF;
   line-height: 16px;
   letter-spacing: 1.66px;
   text-transform: uppercase;
+
+  @include media(mobile) {
+    font-size: 15px;
+    font-weight: 400;
+  }
 }
 @mixin button {
   @include heading-h4;
@@ -36,6 +45,10 @@ $pure-white: #FFFFFF;
   width: 158px;
   border: none;
   cursor: pointer;
+
+  @include media(mobile) {
+    font-size: 12px;
+  }
 }
 
 @mixin button1 {
@@ -96,6 +109,12 @@ body {
   line-height: 25px;
 }
 
+picture img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
 .page__container {
   width: 100%;
   margin: 0 auto;
@@ -106,4 +125,12 @@ body {
   justify-content: inherit;
   align-items: inherit;
   flex-wrap: inherit;
+
+  @include media (tablet-l) {
+    padding: 0 2em;
+  }
+
+  @include media(mobile) {
+    padding: 0 1em;
+  }
 }

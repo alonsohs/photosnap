@@ -1,6 +1,10 @@
 .home__featuresBoxes {
   display: grid;
   grid-template-rows: repeat(3, 600px);
+
+  @include media(mobile) {
+    grid-template-rows: repeat(3, auto);
+  }
 }
 
 
@@ -9,6 +13,15 @@
   &__container {
     display: grid;
     grid-template-columns: .735fr 1fr;
+
+    @include media(tablet-s) {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    @include media(mobile){
+      grid-template-columns: 1fr;
+      grid-template-rows: 294px max-content;
+    }
 
     &:nth-of-type(1) {
       background-color: $pure-black;
@@ -25,6 +38,14 @@
         top: calc(50% - (50%/2));
         left: 0;
         z-index: 2;
+
+        @include media(mobile) {
+          height: 6px;
+          width: 40%;
+          top: 294px;
+          left: 2em;
+          background: linear-gradient(45deg, rgba(255,197,147,1) 0%, rgba(188,113,152,1) 50%, rgba(90,119,255,1) 100%);
+        }
       }
 
       .homeBox__action {
@@ -33,13 +54,17 @@
       }
     }
   }
-
-  &__description {
+  &__descriptionContainer {
     max-width: 387px;
     align-self: center;
     justify-self: center;
 
+    @include media(mobile){
+      padding: 3em 1em 3em 2em;
+      order: 2;
+    }
   }
+
   &__title {
     @include heading-h1;
     width: 90%;
@@ -76,9 +101,17 @@
 
   &.homeBox__container {
     grid-template-columns: 1fr .735fr;
+
+    @include media(tablet-s) {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    @include media(mobile) {
+      grid-template-columns: 1fr;
+    }
   }
 
-  .homeBox__description {
+  .homeBox__descriptionContainer {
     order: 2;
   }
 
@@ -88,5 +121,6 @@
 
   .homeBox__imageContainer {
     order: 1;
+
   }
 }

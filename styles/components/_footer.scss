@@ -8,6 +8,27 @@
     grid-template-rows: 50px 50px;
     grid-template-areas: "logo menu button"
                          "social menu copyright";
+
+    @include media(tablet-s-only) {
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: repeat(3, 52px);
+      grid-template-areas: "logo logo button"
+                           "menu menu menu"
+                           "social social copyright";
+    }
+
+    @include media(mobile) {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto 180px auto auto;
+      grid-template-areas: "logo"
+    "social"
+    "menu"
+    "button"
+    "copyright";
+      justify-items: center;
+      gap: 1.5em;
+    }
   }
 
   &__logo {
@@ -16,6 +37,18 @@
 
   &__menu {
     grid-area: menu;
+
+    ul {
+      @include media(tablet-s-only) {
+        display: flex;
+      }
+
+      @include media(mobile) {
+        display: grid;
+        justify-items: center;
+        gap: .5em;
+      }
+    }
 
     li {
       list-style: none;
@@ -29,6 +62,10 @@
 
       &:hover {
         color: $light-gray;
+      }
+
+      @include media(tablet-s-only) {
+        margin-right: 2em;
       }
     }
   }
@@ -95,5 +132,9 @@
     color: $light-gray ;
     justify-self: end;
     align-self: end;
+
+    @include media(mobile) {
+      justify-self: center;
+    }
   }
 }

@@ -5,10 +5,36 @@ header {
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
+
+    @include media(mobile) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 0px;
+    }
+  }
+  a {
+    height: 16px;
+
+    .header__logo {
+      height: 16px;
+    }
   }
 
-  .header__logo {
-    height: 16px;
+  #header__burgerButton {
+    display: none;
+    border: none;
+    width: 40px;
+    height: 100%;
+    justify-self: end;
+
+    img {
+      width: 50%;
+      margin-left: auto;
+    }
+
+    @include media(mobile) {
+      display: flex;
+      align-items: center;
+    }
   }
 }
 
@@ -18,13 +44,47 @@ header {
   width: 100%;
   height: inherit;
 
+  @include media(mobile){
+    border-top: 1px solid gray;
+    padding: 2em 0;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    background-color: $pure-white;
+    grid-template-columns: .8fr;
+    gap: 1em;
+    justify-content: center;
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+    &.active {
+      transform: translate(0, 0);
+    }
+  }
+
   &__list {
     display: flex;
     justify-content: space-around;
     align-items: center;
 
+    @include media(mobile) {
+      flex-direction: column;
+      border-bottom: 1px solid gray;
+    }
+
     li {
       list-style: none;
+      @include media(mobile) {
+        margin-bottom: .5em;
+
+        &:last-of-type{
+          margin-bottom: 1em;
+        }
+      }
     }
 
     a {
@@ -41,5 +101,11 @@ header {
   &__button {
     @include button1;
     margin-left: auto;
+
+    @include media(mobile){
+      margin: 0;
+      width: 100%;
+      height: 48px;
+    }
   }
 }

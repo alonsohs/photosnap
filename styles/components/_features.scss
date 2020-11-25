@@ -3,6 +3,10 @@
   display: flex;
   align-items: center;
 
+  @include media(mobile) {
+    padding: 5em 0;
+  }
+
   .page__container {
     height: auto;
     display: grid;
@@ -10,6 +14,22 @@
     align-items: baseline;
     gap: 2em;
     row-gap: 5em;
+
+    @include media(tablet-s){
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    @include media(mobile) {
+      grid-template-columns: 1fr;
+      row-gap: 3em;
+    }
+
+    &--home {
+      @include media(tablet-s){
+        grid-template-columns: minmax(100px, 457px);
+        justify-content: center;
+      }
+    }
   }
 
   .feature__container{

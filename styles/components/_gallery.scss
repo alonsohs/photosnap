@@ -2,6 +2,14 @@
   max-width: 100vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
+  @include media(tablet-s) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media(mobile) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .galleryItem {
@@ -12,6 +20,10 @@
     overflow: hidden;
     height: 500px;
     transition: all .5s ease;
+
+    @include media(mobile) {
+      height: 375px;
+    }
 
     &:hover {
       transform: translateY(-20px);

@@ -4,14 +4,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: url("../assets/shared/desktop/bg-beta.jpg");
+    background: url("../assets/shared/desktop/bg-beta.jpg") no-repeat;
     background-size: cover;
+
+    @include media(tablet-s) {
+      background: url("../assets/shared/tablet/bg-beta.jpg");
+      background-size: 100%;
+    }
+
+    @include media(mobile) {
+      background: url("../assets/shared/mobile/bg-beta.jpg");
+      background-size: cover;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
   }
 
   &__title  {
     @include heading-h1;
     color: white;
     max-width: 350px;
+
   }
 
   &__action {
