@@ -1,6 +1,6 @@
 const switchButton = document.getElementById("switch-pricing")
 const switchLabels = document.getElementsByClassName("toogle__plan")
-const pricingPriceLabels = document.getElementsByClassName("pricing__price")
+const pricingPriceLabels = document.getElementsByClassName("pricing__price--title")
 const pricingPerLabels = document.getElementsByClassName("pricing__per")
 
 const yearlyPrices = ['190', '390', '990']

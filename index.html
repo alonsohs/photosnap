@@ -12,6 +12,7 @@
   <body>
     <header>
       <div class="page__container"><a href="./"><img class="header__logo" src="assets/shared/desktop/logo.svg"></a>
+        <button id="header__burgerButton"><img id="header_bg--img" src="../assets/shared/mobile/menu.svg"></button>
         <div class="header__menu">
           <nav class="menu">
             <ul class="menu__list">
@@ -27,7 +28,7 @@
     <main>
       <section class="home__featuresBoxes">
         <div class="homeBox__container">
-          <div class="homeBox__description">
+          <div class="homeBox__descriptionContainer">
             <h1 class="homeBox__title">Create and share your photo Stories</h1>
             <p class="homeBox__description">Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.</p>
             <button class="homeBox__action">Get an invite<img src="assets/shared/desktop/arrow-white.svg"/></button>
@@ -35,7 +36,7 @@
           <picture class="homeBox__imageContainer"><img src="assets/home/desktop/create-and-share.jpg" alt="Home image"/></picture>
         </div>
         <div class="homeBox__container inverted">
-          <div class="homeBox__description">
+          <div class="homeBox__descriptionContainer">
             <h1 class="homeBox__title">Beautiful stories every time</h1>
             <p class="homeBox__description">We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.</p>
             <button class="homeBox__action">View the stories<img src="assets/shared/desktop/arrow.svg"/></button>
@@ -43,7 +44,7 @@
           <picture class="homeBox__imageContainer"><img src="assets/home/desktop/beautiful-stories.jpg" alt="Home image"/></picture>
         </div>
         <div class="homeBox__container">
-          <div class="homeBox__description">
+          <div class="homeBox__descriptionContainer">
             <h1 class="homeBox__title">Designed for everyone</h1>
             <p class="homeBox__description">Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it.</p>
             <button class="homeBox__action">View the stories<img src="assets/shared/desktop/arrow.svg"/></button>
@@ -86,7 +87,7 @@
         </div>
       </section>
       <section class="features__container">
-        <div class="page__container">
+        <div class="page__container page__container--home">
           <div class="feature__container"><img class="feature__icon" src="assets/features/desktop/responsive.svg"/>
             <h3 class="feature__title">100% Responsive</h3>
             <div class="feature__description">No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.</div>
@@ -103,7 +104,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="page__container"><img class="footer__logo" src="assets/shared/desktop/logo-white.svg">
+      <div class="page__container"><a href="./"><img class="footer__logo" src="assets/shared/desktop/logo-white.svg"></a>
         <nav class="footer__menu">
           <ul>
             <li><a href="./index.html">Home</a></li>
@@ -117,5 +118,6 @@
         <div class="footer__copyright">Copyright 2019. All Rights Reserved</div>
       </div>
     </footer>
+    <script src="../js/menu.js"></script>
   </body>
 </html>

@@ -2,17 +2,21 @@ mixin pricingPlan(title,description)
     .pricing__plan
         h2.pricing__title=title
         p.pricing__description=description
-        h1.pricing__price $
-        p.pricing__per per
+        .pricing__price
+            h1.pricing__price--title $
+            p.pricing__per per
         button.pricing__button Pick plan
 
 mixin tableFeatures(title, basic, pro, business)
     .table__feature
         h4.table__feature--title=title
         .table__feature--plans
-            img(src=basic?"assets/pricing/desktop/check.svg":"")
-            img(src=pro?"assets/pricing/desktop/check.svg":"")
-            img(src=business?"assets/pricing/desktop/check.svg":"")
+            p Basic
+            p Pro
+            p Business
+            img(src=basic?"assets/pricing/desktop/check.svg":"", class=basic?"basic":"")
+            img(src=pro?"assets/pricing/desktop/check.svg":"", class=pro?"pro":"")
+            img(src=business?"assets/pricing/desktop/check.svg":"", class=business?"business":"")
 
 
 section.pricing

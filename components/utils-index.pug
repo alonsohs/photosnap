@@ -8,7 +8,7 @@
 
 mixin homeBox(title, description, action, image, inverted, black)
     div(class=inverted?"homeBox__container inverted":"homeBox__container")
-        .homeBox__description
+        .homeBox__descriptionContainer
             h1.homeBox__title=title
             p.homeBox__description=description
             button.homeBox__action=action
@@ -18,7 +18,7 @@ mixin homeBox(title, description, action, image, inverted, black)
 
 mixin heroBox(title, description,folder, image, inverted, black)
     div(class=inverted?"homeBox__container inverted":"homeBox__container")
-        .homeBox__description
+        .homeBox__descriptionContainer
             h1.homeBox__title=title
             p.homeBox__description=description
         picture.homeBox__imageContainer
@@ -36,7 +36,7 @@ mixin galleryItem(galleryTitle, author, galleryImage)
 
 mixin galleryItem--date (date, galleryTitle, author, galleryImage)
     .galleryItem__container
-        img.galleryItem__image(src="assets/stories/desktop/"+galleryImage+".jpg")
+        +imageGallery(galleryImage)
         .galleryItem__image--filter
         .galleryItem__description
             h4.galleryItem__date=date
@@ -51,3 +51,13 @@ mixin feature(icon, title, description)
         h3.feature__title=title
         .feature__description=description
 
+mixin image(folder, name, className)
+    picture(class=className)
+        source(srcset="./assets/"+folder+"/mobile/"+name+".jpg", media="(max-width: 375px)")
+        source(srcset="./assets/"+folder+"/tablet/"+name+".jpg", media="(max-width: 768px)")
+        img(src="./assets/"+folder+"/desktop/"+name+".jpg")
+
+mixin imageGallery( name)
+    picture.galleryItem__image
+        source(srcset="./assets/stories/mobile/" + name + ".jpg", media="(max-width: 400px)")
+        img(src="./assets/stories/desktop/" + name + ".jpg")

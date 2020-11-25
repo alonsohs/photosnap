@@ -12,6 +12,7 @@
   <body>
     <header>
       <div class="page__container"><a href="./"><img class="header__logo" src="assets/shared/desktop/logo.svg"></a>
+        <button id="header__burgerButton"><img id="header_bg--img" src="../assets/shared/mobile/menu.svg"></button>
         <div class="header__menu">
           <nav class="menu">
             <ul class="menu__list">
@@ -27,7 +28,7 @@
     <main>
       <section class="hero__container">
         <div class="homeBox__container">
-          <div class="homeBox__description">
+          <div class="homeBox__descriptionContainer">
             <h1 class="homeBox__title">Pricing</h1>
             <p class="homeBox__description">Create a your stories, Photosnap is a platform for photographers and visual storytellers. 
 It’s the simple way to create and share your photos.</p>
@@ -45,22 +46,28 @@ It’s the simple way to create and share your photos.</p>
                 <div class="pricing__plan">
                   <h2 class="pricing__title">Basic</h2>
                   <p class="pricing__description">Includes basic usage of our platform. Recommended for new and aspiring photographers.</p>
-                  <h1 class="pricing__price">$</h1>
-                  <p class="pricing__per">per</p>
+                  <div class="pricing__price">
+                    <h1 class="pricing__price--title">$</h1>
+                    <p class="pricing__per">per</p>
+                  </div>
                   <button class="pricing__button">Pick plan</button>
                 </div>
                 <div class="pricing__plan">
                   <h2 class="pricing__title">Pro</h2>
                   <p class="pricing__description">More advanced features available. Recommended for photography veterans and professionals.</p>
-                  <h1 class="pricing__price">$</h1>
-                  <p class="pricing__per">per</p>
+                  <div class="pricing__price">
+                    <h1 class="pricing__price--title">$</h1>
+                    <p class="pricing__per">per</p>
+                  </div>
                   <button class="pricing__button">Pick plan</button>
                 </div>
                 <div class="pricing__plan">
                   <h2 class="pricing__title">Business</h2>
                   <p class="pricing__description">Additional features available such as more detailed metrics. Recommended for business owners.</p>
-                  <h1 class="pricing__price">$</h1>
-                  <p class="pricing__per">per</p>
+                  <div class="pricing__price">
+                    <h1 class="pricing__price--title">$</h1>
+                    <p class="pricing__per">per</p>
+                  </div>
                   <button class="pricing__button">Pick plan</button>
                 </div>
         </div>
@@ -76,35 +83,67 @@ It’s the simple way to create and share your photos.</p>
           </div>
                 <div class="table__feature">
                   <h4 class="table__feature--title">Unlimited story posting</h4>
-                  <div class="table__feature--plans"><img src="assets/pricing/desktop/check.svg"><img src="assets/pricing/desktop/check.svg"><img src="assets/pricing/desktop/check.svg"></div>
+                  <div class="table__feature--plans">
+                    <p>Basic</p>
+                    <p>Pro</p>
+                    <p>Business</p><img class="basic" src="assets/pricing/desktop/check.svg"><img class="pro" src="assets/pricing/desktop/check.svg"><img class="business" src="assets/pricing/desktop/check.svg">
+                  </div>
                 </div>
                 <div class="table__feature">
                   <h4 class="table__feature--title">Unlimited photo upload</h4>
-                  <div class="table__feature--plans"><img src="assets/pricing/desktop/check.svg"><img src="assets/pricing/desktop/check.svg"><img src="assets/pricing/desktop/check.svg"></div>
+                  <div class="table__feature--plans">
+                    <p>Basic</p>
+                    <p>Pro</p>
+                    <p>Business</p><img class="basic" src="assets/pricing/desktop/check.svg"><img class="pro" src="assets/pricing/desktop/check.svg"><img class="business" src="assets/pricing/desktop/check.svg">
+                  </div>
                 </div>
                 <div class="table__feature">
                   <h4 class="table__feature--title">Embedding  custom content</h4>
-                  <div class="table__feature--plans"><img src=""><img src="assets/pricing/desktop/check.svg"><img src="assets/pricing/desktop/check.svg"></div>
+                  <div class="table__feature--plans">
+                    <p>Basic</p>
+                    <p>Pro</p>
+                    <p>Business</p><img src=""><img class="pro" src="assets/pricing/desktop/check.svg"><img class="business" src="assets/pricing/desktop/check.svg">
+                  </div>
                 </div>
                 <div class="table__feature">
                   <h4 class="table__feature--title">Customize metadata</h4>
-                  <div class="table__feature--plans"><img src=""><img src="assets/pricing/desktop/check.svg"><img src="assets/pricing/desktop/check.svg"></div>
+                  <div class="table__feature--plans">
+                    <p>Basic</p>
+                    <p>Pro</p>
+                    <p>Business</p><img src=""><img class="pro" src="assets/pricing/desktop/check.svg"><img class="business" src="assets/pricing/desktop/check.svg">
+                  </div>
                 </div>
                 <div class="table__feature">
                   <h4 class="table__feature--title">Advanced metrics</h4>
-                  <div class="table__feature--plans"><img src=""><img src=""><img src="assets/pricing/desktop/check.svg"></div>
+                  <div class="table__feature--plans">
+                    <p>Basic</p>
+                    <p>Pro</p>
+                    <p>Business</p><img src=""><img src=""><img class="business" src="assets/pricing/desktop/check.svg">
+                  </div>
                 </div>
                 <div class="table__feature">
                   <h4 class="table__feature--title">Photo downloads</h4>
-                  <div class="table__feature--plans"><img src=""><img src=""><img src="assets/pricing/desktop/check.svg"></div>
+                  <div class="table__feature--plans">
+                    <p>Basic</p>
+                    <p>Pro</p>
+                    <p>Business</p><img src=""><img src=""><img class="business" src="assets/pricing/desktop/check.svg">
+                  </div>
                 </div>
                 <div class="table__feature">
                   <h4 class="table__feature--title">Search engine indexing</h4>
-                  <div class="table__feature--plans"><img src=""><img src=""><img src="assets/pricing/desktop/check.svg"></div>
+                  <div class="table__feature--plans">
+                    <p>Basic</p>
+                    <p>Pro</p>
+                    <p>Business</p><img src=""><img src=""><img class="business" src="assets/pricing/desktop/check.svg">
+                  </div>
                 </div>
                 <div class="table__feature">
                   <h4 class="table__feature--title">Custom analytics</h4>
-                  <div class="table__feature--plans"><img src=""><img src=""><img src="assets/pricing/desktop/check.svg"></div>
+                  <div class="table__feature--plans">
+                    <p>Basic</p>
+                    <p>Pro</p>
+                    <p>Business</p><img src=""><img src=""><img class="business" src="assets/pricing/desktop/check.svg">
+                  </div>
                 </div>
         </div>
       </section>
@@ -116,7 +155,7 @@ It’s the simple way to create and share your photos.</p>
       </section>
     </main>
     <footer class="footer">
-      <div class="page__container"><img class="footer__logo" src="assets/shared/desktop/logo-white.svg">
+      <div class="page__container"><a href="./"><img class="footer__logo" src="assets/shared/desktop/logo-white.svg"></a>
         <nav class="footer__menu">
           <ul>
             <li><a href="./index.html">Home</a></li>
@@ -130,6 +169,7 @@ It’s the simple way to create and share your photos.</p>
         <div class="footer__copyright">Copyright 2019. All Rights Reserved</div>
       </div>
     </footer>
+    <script src="../js/menu.js"></script>
     <script src="js/pricing.js"></script>
   </body>
 </html>

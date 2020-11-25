@@ -12,6 +12,7 @@
   <body>
     <header>
       <div class="page__container"><a href="./"><img class="header__logo" src="assets/shared/desktop/logo.svg"></a>
+        <button id="header__burgerButton"><img id="header_bg--img" src="../assets/shared/mobile/menu.svg"></button>
         <div class="header__menu">
           <nav class="menu">
             <ul class="menu__list">
@@ -26,6 +27,10 @@
     </header>
     <main>
       <section class="storiesHero">
+        <picture class="hero__img">
+          <source srcset="./assets/stories/mobile/moon-of-appalacia.jpg" media="(max-width: 375px)"/>
+          <source srcset="./assets/stories/tablet/moon-of-appalacia.jpg" media="(max-width: 768px)"/><img src="./assets/stories/desktop/moon-of-appalacia.jpg"/>
+        </picture>
         <div class="hero__content">
           <h4>Last month's featured story</h4>
           <h1 class="hero__title">Hazy full moon of appalachia</h1>
@@ -37,7 +42,10 @@
         </div>
       </section>
       <section class="gallery__container">
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/mountains.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/mountains.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/mountains.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">April 16th 2020</h4>
@@ -46,7 +54,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/cityscapes.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/cityscapes.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/cityscapes.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">April 14th 2020</h4>
@@ -55,7 +66,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/18-days-voyage.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/18-days-voyage.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/18-days-voyage.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">April 11th 2020</h4>
@@ -64,7 +78,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/architecturals.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/architecturals.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/architecturals.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">April 9th 2020</h4>
@@ -73,7 +90,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/world-tour.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/world-tour.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/world-tour.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">April 7th 2020</h4>
@@ -82,7 +102,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/unforeseen-corners.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/unforeseen-corners.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/unforeseen-corners.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">April 3rd 2020</h4>
@@ -91,7 +114,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/king-on-africa.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/king-on-africa.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/king-on-africa.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">March 29th 2020</h4>
@@ -100,7 +126,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/trip-to-nowhere.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/trip-to-nowhere.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/trip-to-nowhere.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">March 21st 2020</h4>
@@ -109,7 +138,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/rage-of-the-sea.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/rage-of-the-sea.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/rage-of-the-sea.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">March 19th 2020</h4>
@@ -118,7 +150,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/running-free.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/running-free.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/running-free.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">March 16th 2020</h4>
@@ -127,7 +162,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/behind-the-waves.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/behind-the-waves.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/behind-the-waves.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">March 11th 2020</h4>
@@ -136,7 +174,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/calm-waters.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/calm-waters.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/calm-waters.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">March 9th 2020</h4>
@@ -145,7 +186,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/milky-way.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/milky-way.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/milky-way.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">March 5th 2020</h4>
@@ -154,7 +198,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/dark-forest.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/dark-forest.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/dark-forest.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">March 4th 2020</h4>
@@ -163,7 +210,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/somwarpet.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/somwarpet.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/somwarpet.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">March 1st 2020</h4>
@@ -172,7 +222,10 @@
             <button class="galleryItem__action">Read story<img src="assets/shared/desktop/arrow-white.svg"/></button>
           </div>
         </div>
-        <div class="galleryItem__container"><img class="galleryItem__image" src="assets/stories/desktop/land-of-dreams.jpg"/>
+        <div class="galleryItem__container">
+          <picture class="galleryItem__image">
+            <source srcset="./assets/stories/mobile/land-of-dreams.jpg" media="(max-width: 400px)"/><img src="./assets/stories/desktop/land-of-dreams.jpg"/>
+          </picture>
           <div class="galleryItem__image--filter"></div>
           <div class="galleryItem__description">
             <h4 class="galleryItem__date">February 25th 2020</h4>
@@ -184,7 +237,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="page__container"><img class="footer__logo" src="assets/shared/desktop/logo-white.svg">
+      <div class="page__container"><a href="./"><img class="footer__logo" src="assets/shared/desktop/logo-white.svg"></a>
         <nav class="footer__menu">
           <ul>
             <li><a href="./index.html">Home</a></li>
@@ -198,5 +251,6 @@
         <div class="footer__copyright">Copyright 2019. All Rights Reserved</div>
       </div>
     </footer>
+    <script src="../js/menu.js"></script>
   </body>
 </html>
