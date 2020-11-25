@@ -41,6 +41,19 @@
 
     }
   }
+  &__description {
+    width: 80%;
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    z-index: 3;
+    display: grid;
+
+    @include media(mobile) {
+      width: 90%;
+      left: 5%;
+    }
+  }
 
   &__date {
     font-weight: 400;
@@ -65,14 +78,6 @@
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.73));
   }
 
-  &__description {
-    width: 80%;
-    position: absolute;
-    bottom: 20px;
-    left: 10%;
-    z-index: 3;
-    display: grid;
-  }
 
   &__title {
     @include heading-h3;
